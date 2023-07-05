@@ -18,7 +18,7 @@ def calcular_duracion(ciudad_origen, ciudad_destino):
 
 # Función para obtener las instrucciones paso a paso utilizando la API de MapQuest
 def obtener_instrucciones(ciudad_origen, ciudad_destino):
-    url = f'http://www.mapquestapi.com/directions/v2/route?key=P56QMdfl4cogNlhISYFIK0WOaINCwgIG&from={ciudad_origen}&to={ciudad_destino}'
+    url = f'http://www.mapquestapi.com/directions/v2/route?key=P56QMdfl4cogNlhISYFIK0WOaINCwgIG&from={ciudad_origen}&to={ciudad_destino}&locale=es'
     response = requests.get(url)
     data = response.json()
     instrucciones = data['route']['legs'][0]['maneuvers']
